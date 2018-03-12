@@ -3,7 +3,9 @@ import mocks from './mocks';
 
 const typeDefs = `
 type Query {
-  testString: String
+  author(firstName: String, lastName: String): Author
+  allAuthors: Author
+  getFortuneCookie: String
 }
 
 type Author{
@@ -18,7 +20,7 @@ type Post {
   title: String
   text: String
   views: Int
-  author: Author 
+  author: Author
 }
 `;
 
